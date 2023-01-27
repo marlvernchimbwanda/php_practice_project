@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 
 	include("connection.php");
@@ -15,34 +14,19 @@ session_start();
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
-			//read from database
-			$query = "select * from users where user_name = '$user_name' limit 1";
-			$result = mysqli_query($con, $query);
+			//save to database
+			$user_id = random_num(20);
+			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
 
-			if($result)
-			{
-				if($result && mysqli_num_rows($result) > 0)
-				{
+			mysqli_query($con, $query);
 
-					$user_data = mysqli_fetch_assoc($result);
-					
-					if($user_data['password'] === $password)
-					{
-
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
-						die;
-					}
-				}
-			}
-			
-			echo "wrong username or password!";
+			header("Location: modern.php");
+			die;
 		}else
 		{
-			echo "wrong username or password!";
+			echo "Please enter some valid information!";
 		}
 	}
-
 ?>
 
 
@@ -62,17 +46,19 @@ session_start();
     <div class = "box" >
         <div class = "container">
             <div class="topheader">
-                <span>Have an account?</span>
-                <header>Login</header>
+                <span>Have</span>
+                <header>Sign In</header>
             </div>
 
             <div class="input-field">
-                <i class = "bx bx-user"> </i>
+            
                 <form method="post">
                     
-                    <input type="text"  class = "input" placeholder = "username" required name = "user_name">   <br> <br>
+                    <input type="text"  class = "input" placeholder = "Name" required name = "user_name">   <br>
                     <input type="password"  class = "input" placeholder = "Password" required name = "password"> <br> <br>
-                    <input type="submit"  class = "submit" value = "Login" >
+                    <input type="submit"  class = "submit" value = "Register" > <br>
+
+                    
                 
             
                 </form>
@@ -88,7 +74,7 @@ session_start();
                 </div>
 
                 <div class="right">
-                    <label> <a href="signin.php">Click to Register?</a></label>
+                    <label> <a href="modern.php">Click to Login?</a></label>
                 </div>
 
 

@@ -18,18 +18,16 @@ $user_data = check_login($con);
 </head>
 <body style = "width: 100%">
 <div class="header">
-  <h1>Marlvern Chimbwanda</h1>
+  <h1 style = "text-align: center;">Marlvern Chimbwanda</h1>
 </div>
-<div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about" style = "align: right;">About</a>
+    <a href="modern.php" style = " position: absolute; right: 0px;" >Logout</a>
 
-</div>
-
-    <a href="logout.php">Logout</a>
+  </div>
     <h1>Home Page</h1>
     <br>
 
