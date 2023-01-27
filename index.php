@@ -16,14 +16,16 @@ $user_data = check_login($con);
     <title>My Practice</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style = "width: 100%">
 <div class="header">
   <h1>Marlvern Chimbwanda</h1>
 </div>
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" text-align = "left">Link</a>
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
 
 </div>
 

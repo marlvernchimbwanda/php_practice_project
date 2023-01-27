@@ -57,8 +57,8 @@ session_start();
     <link rel="stylesheet" href="boxicons-master/css/boxicons.css">
     <title>Modern</title>
 </head>
-<body >
-    <div class="blur"></div>
+<body>
+    
     <div class = "box" >
         <div class = "container">
             <div class="topheader">
