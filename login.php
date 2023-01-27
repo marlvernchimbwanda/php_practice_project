@@ -55,8 +55,8 @@ session_start();
 <body>
 
 		<div id="box">
-		
-		<form method="post">
+
+		<form method="post" class = "loginform">
 			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
 
 			<input id="text" type="text" name="user_name"><br><br>

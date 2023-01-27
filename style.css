@@ -59,20 +59,29 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
     
   } 
 
   .box{
+    justify-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;     
+    min-height: 90vh;
+    max-width: 45ch ; 
+    background-color: #333;
+    background-position: center;
   }
 
   .container{
     width: 350px;
     flex-direction: column;
     padding: 0 15px 0 15px;
+   
   }
   
   span{
@@ -91,7 +100,7 @@
      padding:10px 0 10px 0 ;
   }
   .input{
-    height: 45px;
+    height: 30px;
     width: 87%;
     border: none;
     outline: none;
@@ -99,6 +108,11 @@
     color: #fff;
     padding: 0 0 0 40px ;
     background: rgba(255,255, 255, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    justify-content: center;
   }
 
   i{
@@ -116,7 +130,7 @@
   border: none;
   border-radius: 30px;
   font-size: 15px;
-  height: 45px;
+  height: 38px;
   outline: none;
   width: 100%;
   background: rgba(red, green, blue, 0 7);
@@ -142,6 +156,8 @@
       color: #fff;
       text-decoration: none;
     }
+
+
 
 
 

@@ -20,7 +20,7 @@ session_start();
 
 			mysqli_query($con, $query);
 
-			header("Location: login.php");
+			header("Location: modern.php");
 			die;
 		}else
 		{
@@ -48,7 +48,7 @@ session_start();
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
-			<a href="login.php">Click to Login</a><br><br>
+			<a href="modern.php">Click to Login</a><br><br>
 		</form>
 	</div>
 </body>
